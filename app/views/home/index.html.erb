@@ -1,3 +1,9 @@
+<div class ="sign-in-alert">
+    <% if user_signed_in? %>
+        <%= flash[:alert] = "Welcome back to #{current_user.email}" %>
+    <% end %>
+</div>
+
 <h1>Welcome to Blocitoff</h1>
 <p>An app that helps you get all the tasks you need to use for the day, done in no time!</p>
 <img src = "https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif">
