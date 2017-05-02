@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class= "row">
+    <div class="col-md-8">
+        <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
+        <div class="pull-right">
+            <%= link_to current_user.email %>
+        </div>
+    </div>
+</div>
