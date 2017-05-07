@@ -9,7 +9,7 @@
 <body>
 <div class="pull-right">
   <% if user_signed_in? %>
-    <a href = "../home/index"> 
+    <a href = <%= home_index_path %>> 
     <img src = "http://img.photobucket.com/albums/v18/Nyghtmare/blocitoff_1.png"> </a>
     Signed in as: <strong><%= current_user.email %></strong> |
   
