@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #get 'items/create'
 
-  #get 'users/show'
+  get 'users/show'
 
   #get 'users/index'
 

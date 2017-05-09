@@ -1,6 +1,7 @@
 .pull-right{
     text-align: right;
     background-color: gray;
+    position: fixed top;
 }
 
 .sign-in-alert{
@@ -11,4 +12,5 @@ a img{
     float: left;
     height: 100px;
     width: 200px;
+    position: fixed left;
 }

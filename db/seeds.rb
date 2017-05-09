@@ -21,6 +21,8 @@ end
     )
 end
 
+User.find_or_create_by(email: "blocster@bloc.io", password: "qwerty")
+
 puts "Seeding is complete."
 puts "#{User.count} users created"
 puts "#{Item.count} items created"
