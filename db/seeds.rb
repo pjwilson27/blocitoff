@@ -3,13 +3,15 @@ require 'faker'
 10.times do
     User.create!(
         email: Faker::Internet.email,
-        password: Faker::Internet.password(8)
+        password: Faker::Internet.password(8),
+        confirmed_at: Time.now
     )
 end
-
+#make potent
     demo = User.create!(
         email: 'blocster@bloc.io',
-        password: 'qwerty'
+        password: 'qwerty',
+        confirmed_at: Time.now
     )
     
 
