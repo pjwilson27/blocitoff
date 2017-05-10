@@ -9,9 +9,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :users, only: [:show] do
-    resources :items
+  resources :users do
+    resources :items, only: [:create]
   end
+  
+  resources :items, only: [:destroy]
   
   root to: 'users#show'
 end
