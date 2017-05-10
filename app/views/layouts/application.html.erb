@@ -25,7 +25,9 @@
     <a href = <%= home_index_path %>> 
     <img src = "http://img.photobucket.com/albums/v18/Nyghtmare/blocitoff_1.png"> </a>
 </div>
-
+<% flash.each do |key,value| %>
+  <div class="alert alert-info"><%= value %></div>
+<% end %>
 <%= yield %>
 
 </body>
