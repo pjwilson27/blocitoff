@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #get 'items/create'
 
-  get 'users/show'
+  #get 'users/show'
 
   #get 'users/index'
 
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :users do
+  resources :users, only: [:show] do
     resources :items, only: [:create]
   end
   
