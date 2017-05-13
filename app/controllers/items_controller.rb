@@ -2,21 +2,21 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.create(item_params)
     if @item.save
-      redirect_to users_show_path
+      flash[:notice] = "You just made the list, #{@item.name}!"
     end
   end
   
   def destroy
     @item = Item.find(params[:id])
-    @user = item.user
+    @user = User.find(params[:id])
     
     
     if @item.destroy
-      flash[:notice] = "You have successfully deleted #{@item.name}."
-      redirect_to users_show_path
+      flash[:notice] = "You have successfully deleted '#{@item.name}'."
+      redirect_to user_path
     else
       flash.now[:alert] = "Unable to process your request..Try again later."
-      redirect_to users_show_path
+      redirect_to user_path
     end
   end
   

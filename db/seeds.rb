@@ -7,12 +7,6 @@ require 'faker'
         confirmed_at: Time.now
     )
 end
-#make potent
-    demo = User.create!(
-        email: 'blocster@bloc.io',
-        password: 'qwerty',
-        confirmed_at: Time.now
-    )
     
 
 5.times do
@@ -21,7 +15,7 @@ end
     )
 end
 
-User.find_or_create_by(email: "blocster@bloc.io", password: "qwerty")
+User.find_or_create_by(email: "blocster@bloc.io", password: "qwerty", confirmed_at: Time.now)
 
 puts "Seeding is complete."
 puts "#{User.count} users created"
