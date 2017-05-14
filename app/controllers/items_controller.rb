@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.create(item_params)
     if @item.save
       flash[:notice] = "You just made the list, #{@item.name}!"
-      redirect_to home_index_path
+      redirect_to user_path(current_user)
     end
   end
   
@@ -14,10 +14,10 @@ class ItemsController < ApplicationController
     
     if @item.destroy
       flash[:notice] = "You have successfully deleted '#{@item.name}'."
-      redirect_to home_index_path
+      redirect_to user_path(current_user)
     else
       flash.now[:alert] = "Unable to process your request..Try again later."
-      redirect_to home_index_path
+      redirect_to user_path(current_user)
     end
   end
   
