@@ -1,4 +1,4 @@
 <div class="items-listed">
-    <%= item.name %> <br>
+    <strong><%= item.name %></strong><p>Created <%= time_remaining(item) %> Ago</p> <br>
     <%= link_to "", item_path(item), method: :delete, class: 'glyphicon glyphicon-ok' %>
 </div>
