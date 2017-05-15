@@ -38,7 +38,19 @@
 .glyphicon{
     //margin-left: 83%;
     display: inline;
-    color: green;
+    color: red;
+}
+
+body{
+    background-color: #a4af83;
+}
+
+.navbar-link{
+    color: #0d1d84;
+}
+
+.navbar-link:hover{
+    color: red;
 }
 
 //.gravatar{
